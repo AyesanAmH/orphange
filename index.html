@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#header-template").load("nav.html");
+            $("#footer-template").load("footer.html");
+        });
+    </script>
+    <div id="header-template"></div>
+    <div id="all">
+        <!-- topview -->
+        <div class="sm:hidden  relative flex justify-center mt-3   w-full h-44 pl-1 pr-1">
+            <!-- image -->
+            <div class="w-full  h-full max-w-sm">
+                <img class="w-full h-full" src="photos/temporary.jpg" alt="mine">
+            </div>
+            <!-- buttons -->
+            <div class="absolute bottom-4 max-w-sm w-full flex flex-wrap justify-center ">
+                <a href="donation.html" class="w-1/4">
+                    <button id="m_donate"
+                        class="w-full mr-4  bg-white hover:bg-gray-300 font-bold py-1 px-4 rounded text-sm">လှူမည်</button>
+                </a>
+                <a href="" class="w-1/4">
+                    <button id="m_buy"
+                        class="w-full ml-4  bg-white hover:bg-gray-300 font-bold py-1 px-4 rounded text-sm">ဝယ်မည်</button>
+                </a>
+            </div>
+        </div>
+        <div class="hidden sm:flex justify-center mt-2 mb-2 ">
+            <div class="flex w-5/6 sm:h-64 lg:h-80 xl:h-96 ">
+                <!-- image -->
+                <div class="w-1/2 h-full  flex  items-center justify-end ">
+                    <img class="w-full h-full " src="/photos/mine.jpg" alt="">
+                </div>
+    
+                <div class="w-1/2  flex items-center justify-end">
+                    <div class="sm:ml-6 md:ml-8 lg:ml-10 xl:ml-12 2xl:ml-14 ">
+                        <!-- text -->
+                            <p
+                                class="w-full sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-500 leading-snug text-center ">
+                                We cannot all do great things, but we can do small things with great love. </p>
+                        <p
+                            class=" flex justify-center sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-500 sm:mt-1 md:mt-2 lg:mt-3 xl:mt-4">
+                            _Morther Teresa_
+                        </p>
+                        <div class=" w-full flex justify-center sm:mt-4 md:mt-6 lg:mt-8 xl:mt-10">
+                            <!-- buttons -->
+                            <a href="donation.html" class="w-1/3 ">
+                                <button
+                                    class="w-full mr-4  bg-gray-300 hover:bg-gray-400  py-1 xl:py-1.5  rounded  ">လှူမည်</button>
+                            </a>
+                            <button class="w-1/3 ml-4  bg-gray-300 hover:bg-gray-400  py-1 xl:py-1.5 rounded ">ဝယ်မည်</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- group -->
+        <div class="sm:hidden flex justify-center mt-1 mb-2">
+            <div class=" max-w-sm mr-2 ml-2 grid grid-cols-4 gap-4 mt-2">
+                <!-- memories -->
+                <div class=" flex justify-center ">
+                    <div class="">
+                        <a href="">
+                            <div class="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-blue-900"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </a>
+                        <p class="text-center text-gray-900 text-xs">အမှတ်တရ</p>
+                    </div>
+                </div>
+                <!-- staffs -->
+                <div class=" flex justify-center ">
+                    <div class="">
+                        <a href="staff&voldetails.html">
+                            <div class="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-blue-900"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <p class="text-center text-gray-900 text-xs">ဝန်ထမ်းများ</p>
+                    </div>
+                </div>
+                <!-- volunteers -->
+                <div class=" flex justify-center ">
+                    <div class="w-full sm:w-1/3">
+                        <a href="staff&voldetails.html">
+                            <div class="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-blue-900"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                                </svg>
+                            </div>
+                        </a>
+                        <p class="text-center text-gray-900 text-xs">စေတနာ့ဝန်ထမ်း</p>
+                    </div>
+                </div>
+                <!-- Adaylife -->
+                <div class=" flex justify-center ">
+                    <div class="">
+                        <a href="">
+                            <div class="flex justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-blue-900"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                        </a>
+                        <p class="text-center text-gray-900 text-xs">တစ်နေ့တာ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- donors -->
+        <div class="sm:hidden ml-2">
+            <div class="flex justify-center mt-4">
+                <div class="relative h-48 flex ">
+                    <div class=" w-36 h-full">
+                        <img src="/photos/exam.jpg" alt="image" class="w-full h-full">
+                    </div>
+                    <div class="flex items-center">
+                        <a href="donordetailsmonthly.html">
+                            <div class="flex items-center w-full">
+                                <div class="-ml-7   w-48 h-24 flex justify-center items-center  bottom-9 bg-gray-300 ">
+                                    <div class=" ">
+                                        <p class="text-sm">လစဉ်အလှူရှင်များ</p>
+                                        <p class="text-sm">စုစုပေါင်း -၂၀ ဦး</p>
+                                        <p class="text-sm">ကျပ်ငွေ - ၁၀ သိန်း</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-5">
+                <div class="relative h-48 flex ">
+                    <div class=" w-36 h-full">
+                        <img src="/photos/exam.jpg" alt="image" class="w-full h-full">
+                    </div>
+                    <div class="flex items-center">
+                        <a href="donordetailsmonthly.html">
+                            <div class="flex items-center w-full">
+                                <div class="-ml-7   w-48 h-24 flex justify-center items-center  bottom-9 bg-gray-300 ">
+                                    <div class=" ">
+                                        <p class="text-sm">လစဉ်အလှူရှင်များ</p>
+                                        <p class="text-sm">စုစုပေါင်း -၂၀ ဦး</p>
+                                        <p class="text-sm">ကျပ်ငွေ - ၁၀ သိန်း</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-5">
+                <div class="relative h-52 flex ">
+                    <div class=" w-36 h-full">
+                        <img src="/photos/exam.jpg" alt="image" class="w-full h-full">
+                    </div>
+                    <div class="flex items-center">
+                        <a href="donordetailsmonthly.html">
+                            <div class="flex items-center w-full">
+                                <div class="-ml-7   w-48 h-24 flex justify-center items-center  bottom-9 bg-gray-300 ">
+                                    <div class=" ">
+                                        <p class="text-sm">လစဉ်အလှူရှင်များ</p>
+                                        <p class="text-sm">စုစုပေါင်း -၂၀ ဦး</p>
+                                        <p class="text-sm">ကျပ်ငွေ - ၁၀ သိန်း</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hidden  sm:flex sm:ml-2 lg:ml-4 xl:ml-8">
+            <div
+                class="w-full   sm:pl-14 sm:pr-10 lg:pl-24 lg:pr-20 sm:mt-4 xl:mt-8  grid grid-cols-3 gap-4  sm:h-32 md:h-36 lg:h-48 xl:h-56 2xl:60 ">
+                <div class="flex w-full  h-full ">
+                    <div class="w-1/2 h-full">
+                        <img src="/photos/exam.jpg" alt="" class="w-full h-full">
+                    </div>
+                    <div class="w-1/2 h-full flex justify-center items-center">
+                        <div>
+                            <p class="sm:text-xs  lg:text-base 2xl:text-xl  ">လစဉ်အလှူရှင်များ</p>
+                            <p class="sm:text-xs  lg:text-base pt-1 2xl:text-xl 2xl:pt-3">စုစုပေါင်း-၂၀ဦး</p>
+                            <p class="sm:text-xs  lg:text-base pt-1 2xl:text-xl 2xl:pt-3">ကျပ်ငွေ-၁၀သိန်း</p>
+                            <a href="donordetailsmonthly.html"
+                                class="sm:text-xs lg:text-base underline pt-1 2xl:text-xl 2xl:pt-3">အသေးစိတ်ကြည့်ရန်</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex w-full   h-full ">
+                    <div class="w-1/2 h-full">
+                        <img src="/photos/exam.jpg" alt="" class="w-full h-full">
+                    </div>
+                    <div class="w-1/2 h-full flex justify-center items-center">
+                        <div>
+                            <p class="sm:text-xs  lg:text-base 2xl:text-xl  ">ယခုလအလှူရှင်များ</p>
+                            <p class="sm:text-xs  lg:text-base pt-1 2xl:text-xl 2xl:pt-3">စုစုပေါင်း-၂၀ဦး</p>
+                            <p class="sm:text-xs  lg:text-base pt-1 2xl:text-xl 2xl:pt-3">ကျပ်ငွေ-၁၀သိန်း</p>
+                            <a href="donordetails.html"
+                                class="sm:text-xs lg:text-base underline pt-1 2xl:text-xl 2xl:pt-3">အသေးစိတ်ကြည့်ရန်</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex w-full  h-full ">
+                    <div class="w-1/2 h-full">
+                        <img src="/photos/exam.jpg" alt="" class="w-full h-full">
+                    </div>
+                    <div class="w-1/2 h-full flex justify-center items-center">
+                        <div>
+                            <p class="sm:text-xs  lg:text-base 2xl:text-xl  ">ပျိုးပင်ဝယ်ယူသူများ</p>
+                            <p class="sm:text-xs  lg:text-base pt-1 2xl:text-xl 2xl:pt-3">စုစုပေါင်း-၂၀ဝပင်</p>
+                            <p class="sm:text-xs  lg:text-base pt-1 2xl:text-xl 2xl:pt-3">ကျပ်ငွေ-၁၀သိန်း</p>
+                            <a href="seedlings.html"
+                                class="sm:text-xs lg:text-base underline pt-1 2xl:text-xl 2xl:pt-3">အသေးစိတ်ကြည့်ရန်</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Group -->
+        <div class="hidden sm:flex sm:mt-8 xl:mt-10 sm:pl-10 sm:pr-10 lg:pl-20 lg:pr-20 ">
+            <div class=" grid grid-cols-2 sm:gap-4 sm:ml-4 sm:mr-4 w-full ">
+                <a href="">
+                    <div class="sm:h-64 md:h-72 xl:h-96 relative ">
+                        <img class="h-full w-full" src="./photos/mine.jpg" alt="">
+                        <div class="flex absolute sm:bottom-6 md:bottom-8 sm:right-6 md:right-8  justify-end ">
+                            <p class=" sm:text-sm md:text-base xl:text-lg text-white ">အမှတ်တရ</p>
+                        </div>
+                    </div>
+                </a>
+                <div class="grid grid-rows-3 sm:gap-2 sm:h-64 md:h-72 xl:h-96 w-full">
+                        <div class="relative">
+                          <a href="staff&voldetails.html">
+                            <img class="h-full w-full" src="/photos/temporary.jpg" alt="">
+                            <div class="flex absolute sm:bottom-2 md:bottom-4 sm:right-4 md:right-6  justify-end ">
+                                <p class=" sm:text-sm md:text-base xl:text-lg text-white ">ဝန်ထမ်းများ</p>
+                            </div>
+                          </a>  
+                        </div>
+                    <div class="relative">
+                       <a href="staff&voldetails.html">
+                        <img class="h-full w-full" src="/photos/temporary.jpg" alt="">
+                        <div class="flex absolute sm:bottom-2 sm:right-4 md:bottom-4 md:right-6  justify-end ">
+                            <p class=" sm:text-sm md:text-base xl:text-lg text-white ">စေတနာ့ဝန်ထမ်းများ</p>
+                        </div>
+                       </a>
+                    </div>
+                 
+                  
+                    <div class="relative">
+                        <a href="">
+                            <img class="h-full w-full" src="/photos/temporary.jpg" alt="">
+                        <div class="flex absolute sm:bottom-2 sm:right-4 md:bottom-4 md:right-6  justify-end ">
+                            <p class=" sm:text-sm md:text-base xl:text-lg text-white ">တစ်နေ့တာ</p>
+                        </div>
+                        </a>
+                    </div>
+                  
+
+                </div>
+            </div>
+        </div>
+
+        <!-- schoolfete -->
+        <div class="sm:hidden mt-3  flex justify-center">
+            <div class="max-w-sm">
+                <div class="grid grid-cols-2 mb-1">
+                    <p class="ml-4 text-sm font-bold">ပျိုးပင်များ</p>
+                   <a href="schoolfete.html">
+                    <div class="flex justify-end mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </div>
+                </a>
+                </div>
+                <div class="grid grid-cols-2 gap-4 ml-2 mr-2 ">
+                    <div class="h-52 ">
+                        <img class="image w-full h-3/5 " id="imageone" src="" alt="">
+                        <div class="h-2/5 w-full flex justify-center items-center bg-gray-300">
+                            <div>
+                                <p class="text-xs text-center">စံပယ်</p>
+                                <p class="text-xs text-center mt-0.7">အရွယ်အစား-၅"</p>
+                                <p class="text-xs text-center mt-0.7">တန်ဖိုး -၂၀၀၀ကျပ်</p>
+                                <div class="flex justify-center mt-2">
+                                    <button class="bg-white flex py-0.8 px-3 hover:bg-gray-300  text-xs  ">ဝယ်မည် </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-52 ">
+                        <img class="image w-full h-3/5" id="imagetwo" src="" alt="">
+                        <div class="h-2/5 w-full flex justify-center items-center bg-gray-300">
+                            <div>
+                                <p class="text-xs text-center">စံပယ်</p>
+                                <p class="text-xs text-center mt-0.7">အရွယ်အစား-၅"</p>
+                                <p class="text-xs text-center mt-0.7">တန်ဖိုး -၂၀၀၀ကျပ်</p>
+                                <div class="flex justify-center mt-2">
+                                    <button class="bg-white flex py-0.8 px-3 hover:bg-gray-300  text-xs  ">ဝယ်မည် </button>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    window.addEventListener('load', () => {
+                        if (window.innerWidth < 400) {
+                            document.querySelector('#imageone').src = "../photos/mine.jpg"
+                            document.querySelector('#imagetwo').src = "../photos/mine.jpg"
+                        }
+                        else
+                            document.querySelector('#imageone').src = "../photos/temporary.jpg"
+                        document.querySelector('#imagetwo').src = "../photos/temporary.jpg"
+                    })
+                    window.addEventListener('resize', () => {
+                        if (window.innerWidth < 400) {
+                            document.querySelector('#imageone').src = "../photos/mine.jpg"
+                            document.querySelector('#imagetwo').src = "../photos/mine.jpg"
+                        }
+                        else {
+                            document.querySelector('#imageone').src = "../photos/temporary.jpg"
+                            document.querySelector('#imagetwo').src = "../photos/temporary.jpg"
+                        }
+        
+                    })
+                </script>
+            </div>
+        </div>
+        <div class="hidden sm:flex sm:mt-6 lg:mt-10 justify-center   sm:h-60 md:h-72   lg:h-96 sm:pl-10 sm:pr-10 lg:pl-20 lg:pr-20">
+            <div class="w-1/4 xl:w-1/5 ">
+                <img class="w-full  h-3/5 " src="/photos/exam.jpg" alt="">
+                <div class="w-full h-2/5  flex justify-center items-center bg-gray-300">
+                    <div>
+                        <p class="text-sm text-center">စံပယ်</p>
+                        <p class="text-sm text-center md:mt-1.5 lg:mt-2">အရွယ်အစား-၅"</p>
+                        <p class="text-sm text-center md:mt-1.5 lg:mt-2">တန်ဖိုး -၂၀၀၀ကျပ်</p>
+                        <div class="flex justify-center mt-1 md:mt-2 lg:mt-3">
+                            <button class="bg-white flex py-1 px-4 hover:bg-gray-400  text-sm rounded ">ဝယ်မည် </button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class=" w-2/4 xl:w-2/5  sm:mr-4 sm:ml-4 lg:mr-8 lg:ml-8">
+                <div class="h-1/3 flex justify-center lg:items-center">
+                    <div>
+                        <p class="lg:text-xl text-center ">ပျိုးဉယျာဉ်</p>
+                        <p class="lg:text-lg text-center  md:mt-1 md:mb-1 lg:mb-2 xl:mt-2  ">ပန်းမန်မျိူးစုံ၊သီးပင်စားပင်နှင့်အရိပ်ရပင်များ</p>
+                        <a href="schoolfete.html">
+                            <div class="flex justify-center">
+                                <button
+                                    class="bg-white  flex py-1 px-4 bg-gray-300 hover:bg-gray-400  text-sm rounded text-sm">ပျိုးပင်အားလုံး</button>
+                            </div>
+                        </a>
+    
+                    </div>
+                </div>
+                
+                    <div class="h-2/3 flex">
+                        <div class="w-1/2 h-full sm:mr-2 xl:mr-4">
+                            <img class="w-full  h-1/2 " src="/photos/mine.jpg" alt="">
+                            <div class="w-full h-1/2 flex justify-center items-center bg-gray-300">
+                                <div>
+                                    <p class="text-xs md:text-sm text-center">စံပယ်</p>
+                                    <p class="text-xs md:text-sm text-center lg:mt-1.5">အရွယ်အစား-၅"</p>
+                                    <p class="text-xs md:text-sm text-center lg:mt-1.5">တန်ဖိုး -၂၀၀၀ကျပ်</p>
+                                    <div class="flex justify-center mt-1 lg:mt-2">
+                                        <button class="bg-white flex md:py-1 px-4 hover:bg-gray-400 text-xs  md:text-sm rounded ">ဝယ်မည်
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-full w-1/2 sm:ml-2 xl:ml-4">
+                            <img class="w-full   h-1/2 " src="/photos/mine.jpg" alt="">
+                            <div class="w-full h-1/2 flex justify-center items-center bg-gray-300">
+                                <div>
+                                    <p class="text-xs md:text-sm text-center">စံပယ်</p>
+                                    <p class="text-xs md:text-sm text-center lg:mt-1.5">အရွယ်အစား-၅"</p>
+                                    <p class="text-xs md:text-sm text-center lg:mt-1.5">တန်ဖိုး -၂၀၀၀ကျပ်</p>
+                                    <div class="flex justify-center mt-1 lg:mt-2">
+                                        <button class="bg-white flex md:py-1 px-4 hover:bg-gray-400 text-xs  md:text-sm rounded ">ဝယ်မည်
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+            </div>
+            <div class="w-1/4 xl:w-1/5  ">
+                <img class="w-full  h-3/5 " src="/photos/exam.jpg" alt="">
+                <div class="w-full h-2/5  flex justify-center items-center bg-gray-300">
+                    <div>
+                        <p class="text-sm text-center">စံပယ်</p>
+                        <p class="text-sm text-center md:mt-1.5 lg:mt-2">အရွယ်အစား-၅"</p>
+                        <p class="text-sm text-center md:mt-1.5 lg:mt-2">တန်ဖိုး -၂၀၀၀ကျပ်</p>
+                        <div class="flex justify-center mt-1 md:mt-2 lg:mt-3">
+                            <button class="bg-white flex py-1 px-4 hover:bg-gray-400  text-sm rounded ">ဝယ်မည် </button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <div id="footer-template"></div>
+
+    </div>
+</body>
+
+</html>

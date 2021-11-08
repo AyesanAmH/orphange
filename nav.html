@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="flex flex-wrap w-full bg-white justify-center md:justify-end mt-1">
+        <div class="flex items-center mx-0.5 md:hidden w-full">
+            <button id="menu-button" class="outline-none hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <div class="shadow flex flex-grow mx-1">
+                <input class="w-full rounded p-2 focus:outline-none " type="text" placeholder="ရှာမည်...">
+                <button class="bg-white w-auto flex justify-end items-center  p-2 hover:text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+            <button id="shopping-button" class="outline-none hover:text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </button>
+        </div>
+        <div class="hidden md:flex md:items-center md:w-auto" id="menu">
+            <ul class="pt-2 md:flex md:justify-between md:pt-0 md:items-center">
+                <li>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="index.html">မူလစာမျက်နှာ</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="donors-all.html">အလှူရှင်</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="staffs&volunteers.html">ဝန်ထမ်း</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="schoolfete.html">ရန်ပုံငွေ</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="">တစ်နေ့တာ</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="">အမှတ်တရ</a>
+                </li>
+                <li>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="">ဆက်သွယ်ရန်</a>
+                </li>
+                <li>
+                    <a class="0 md:p-4 py-2 block hover:text-gray-500 hidden md:flex" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd" />
+                        </svg></a>
+                </li>
+                <li>
+                    <a class=" md:p-4 py-3 block hover:text-gray-500 hidden md:flex" href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            const menu_button = document.querySelector('#menu-button')
+            const menu = document.querySelector("#menu")
+            menu_button.addEventListener('click', () => {
+                menu.classList.toggle('hidden')
+                document.querySelector('#all').classList.toggle('hidden')
+
+            })
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    menu.classList.toggle('hidden', true)
+                }
+            })
+        </script>
+    </nav>
+
+</body>
+</html>
