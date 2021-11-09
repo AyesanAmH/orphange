@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $(function () {
+            $("#header-template").load("nav.html");
+            $("#footer-template").load("footer.html");
+        });
+    </script>
+    <div id="header-template"></div>
+    <div id="all">
+        <div class="sm:hidden  flex justify-center">
+            <div class="w-5/6 max-w-xs">
+                <div class="w-full mt-4">
+                    <div class="  h-48  ">
+                        <div class="h-full">
+                            <img class="w-full h-full" src="/photos/mine.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-300 ">
+                        <p class="text-center font-bold pt-1">Library</p>
+                        <p id="contentone" class="  line-clamp-4 pr-2 pl-2">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Ex
+                            quasi molestiae consequuntur, quae laudantium placeat atque tenetur perspiciatis repudiandae
+                            libero recusandae ad facere, voluptate pariatur explicabo dolore. Quas, nisi culpa!</p>
+                        <div class="ctext flex justify-end pr-2 pt-1 pb-2 ">
+                            <button id="btnone" class="   hover:bg-gray-500 bg-white font-bold py-1 px-4 rounded">
+                                More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 w-full ">
+                    <div class="  h-48  ">
+                        <div class="h-full">
+                            <img class="w-full h-full" src="/photos/mine.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="bg-gray-300 ">
+                        <p class="text-center font-bold pt-1">Library</p>
+                        <p id="contenttwo" class="  line-clamp-4 pr-2 pl-2">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Ex
+                            quasi molestiae consequuntur, quae laudantium placeat atque tenetur perspiciatis repudiandae
+                            libero recusandae ad facere, voluptate pariatur explicabo dolore. Quas, nisi culpa!</p>
+                        <div class="ctext flex justify-end pr-2 pt-1 pb-2 ">
+                            <button id="btntwo" class="   hover:bg-gray-500 bg-white font-bold py-1 px-4 rounded">
+                                More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <script>
+                const btnone = document.querySelector('#btnone')
+                btnone.addEventListener('click', () => {
+                    if (btnone.textContent == "Less") {
+                        btnone.textContent = "More"
+                        $("#contentone").css({
+                            "-webkit-line-clamp": "4"
+                        });
+                    }
+                    else {
+                        btnone.textContent = "Less";
+                        $("#contentone").css({
+                            "-webkit-line-clamp": "unset"
+                        });
+                    }
+                })
+
+                const btntwo = document.querySelector('#btntwo')
+                btntwo.addEventListener('click', () => {
+                    if (btntwo.textContent == "Less") {
+                        btntwo.textContent = "More"
+                        $("#contenttwo").css({
+                            "-webkit-line-clamp": "4"
+                        });
+                    }
+                    else {
+                        btntwo.textContent = "Less";
+                        $("#contenttwo").css({
+                            "-webkit-line-clamp": "unset"
+                        });
+                    }
+                })
+
+            </script>
+        </div>
+        <div class="hidden  sm:flex justify-center  w-full">
+            <div class="w-5/6 sm:pl-4 lg:pl-6 xl:pl-20">
+                <div class="w-full ">
+                    <div class="sm:h-64 lg:h-72 xl:h-80 flex  justify-center xl:-mt-2">
+                        <div class="w-3/5 xl:w-2/5 flex items-center justify-center ">
+                            <div class=" ">
+                                <p class="text-center  lg:text-lg mb-2">စာကြည့်တိုက်</p>
+                                <p class="sm:text-sm lg:text-base sm:pr-4">ဒါဟာ နန္ဒာရဲ့ အမှားတော့ဖြစ်သည်။ သို့သော် နန္ဒာ
+                                    မပြုလုပ်ခဲ့ရသော မွေးကတည်းကပါသော အမှားဖြစ်သည်။ ထိုအမှားကြောင့် စိတ်သိမ်မွေ့သည်။
+                                    တစ်ယောက်တည်း ဖယ်ခွာထွက်လာစေတတ်သည်။ ဝေဒနာ ခံစားရာတွင် ပြင်းပြစေသည်။ လောကတွင်
+                                    အကောင်းဆုံးချည်း၊ အလှဆုံးချည်းမြင်စေ၊ မျှော်မှန်းစေပြီး အကောင်းနှင့်အလှ ဆိုတာချည်း
+                                    ဖြစ်နိူင်သည်ဟု ယုံမှားစေသေး၏ ။ စိတ်ကူးယဉ်စေ၏ ။ စိတ်ဒဏ်ရာ ရလွယ်စေ၏ ။ မေ့ပျောက်ခဲစေ၏ ။
+                                    ပြီးတော့ ကိုကို့နှမ မြနန္ဒာအဖို့ ပိုဆိုးသည်မှာ ကိုယ့်ကိုယ်ကို ဘာလိုချင်မှန်း၊ ဘဝတွင်
+                                    ဘယ်လိုနေရမှန်း မသိခဲ့ခြင်းပင် ဖြစ်လေသည်။
+
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-2/5  ">
+                            <img class="w-full h-full sm:pt-3 sm:pb-3 lg:p-4 xl:pt-5 
+                        xl:pb-5 xl:pl-8" src="/photos/mine.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="sm:h-64 lg:h-72 xl:h-80 flex  justify-center">
+                        <div class="w-3/5 xl:w-2/5 flex items-center justify-center ">
+                            <div class="">
+                                <p class="text-center  lg:text-lg mb-2">စာကြည့်တိုက်</p>
+                                <p class="sm:text-sm lg:text-base sm:pr-4">ဒါဟာ နန္ဒာရဲ့ အမှားတော့ဖြစ်သည်။ သို့သော် နန္ဒာ
+                                    မပြုလုပ်ခဲ့ရသော မွေးကတည်းကပါသော အမှားဖြစ်သည်။ ထိုအမှားကြောင့် စိတ်သိမ်မွေ့သည်။
+                                    တစ်ယောက်တည်း ဖယ်ခွာထွက်လာစေတတ်သည်။ ဝေဒနာ ခံစားရာတွင် ပြင်းပြစေသည်။ လောကတွင်
+                                    အကောင်းဆုံးချည်း၊ အလှဆုံးချည်းမြင်စေ၊ မျှော်မှန်းစေပြီး အကောင်းနှင့်အလှ ဆိုတာချည်း
+                                    ဖြစ်နိူင်သည်ဟု ယုံမှားစေသေး၏ ။ စိတ်ကူးယဉ်စေ၏ ။ စိတ်ဒဏ်ရာ ရလွယ်စေ၏ ။ မေ့ပျောက်ခဲစေ၏ ။
+                                    ပြီးတော့ ကိုကို့နှမ မြနန္ဒာအဖို့ ပိုဆိုးသည်မှာ ကိုယ့်ကိုယ်ကို ဘာလိုချင်မှန်း၊ ဘဝတွင်
+                                    ဘယ်လိုနေရမှန်း မသိခဲ့ခြင်းပင် ဖြစ်လေသည်။
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-2/5  ">
+                            <img class="w-full h-full sm:pt-3 sm:pb-3 lg:pt-4 lg:pb-4 xl:pt-5 
+                        xl:pb-5  xl:pl-8" src="/photos/mine.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="sm:h-64 lg:h-72 xl:h-80 flex  justify-center">
+                        <div class="w-3/5 xl:w-2/5 flex items-center justify-center">
+                            <div class="">
+                                <p class="text-center  lg:text-lg mb-2">စာကြည့်တိုက်</p>
+                                <p class="sm:text-sm lg:text-base sm:pr-4">ဒါဟာ နန္ဒာရဲ့ အမှားတော့ဖြစ်သည်။ သို့သော် နန္ဒာ
+                                    မပြုလုပ်ခဲ့ရသော မွေးကတည်းကပါသော အမှားဖြစ်သည်။ ထိုအမှားကြောင့် စိတ်သိမ်မွေ့သည်။
+                                    တစ်ယောက်တည်း ဖယ်ခွာထွက်လာစေတတ်သည်။ ဝေဒနာ ခံစားရာတွင် ပြင်းပြစေသည်။ လောကတွင်
+                                    အကောင်းဆုံးချည်း၊ အလှဆုံးချည်းမြင်စေ၊ မျှော်မှန်းစေပြီး အကောင်းနှင့်အလှ ဆိုတာချည်း
+                                    ဖြစ်နိူင်သည်ဟု ယုံမှားစေသေး၏ ။ စိတ်ကူးယဉ်စေ၏ ။ စိတ်ဒဏ်ရာ ရလွယ်စေ၏ ။ မေ့ပျောက်ခဲစေ၏ ။
+                                    ပြီးတော့ ကိုကို့နှမ မြနန္ဒာအဖို့ ပိုဆိုးသည်မှာ ကိုယ့်ကိုယ်ကို ဘာလိုချင်မှန်း၊ ဘဝတွင်
+                                    ဘယ်လိုနေရမှန်း မသိခဲ့ခြင်းပင် ဖြစ်လေသည်။
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-2/5  ">
+                            <img class="w-full h-full sm:pt-3 sm:pb-3 lg:pt-4 lg:pb-4 xl:pt-5 
+                        xl:pb-5 xl:pl-8" src="/photos/mine.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="sm:h-64 lg:h-72 xl:h-80 flex  justify-center">
+                        <div class="w-3/5 xl:w-2/5 flex items-center justify-center">
+                            <div class="">
+                                <p class="text-center  lg:text-lg mb-2">စာကြည့်တိုက်</p>
+                                <p class="sm:text-sm lg:text-base sm:pr-4">ဒါဟာ နန္ဒာရဲ့ အမှားတော့ဖြစ်သည်။ သို့သော် နန္ဒာ
+                                    မပြုလုပ်ခဲ့ရသော မွေးကတည်းကပါသော အမှားဖြစ်သည်။ ထိုအမှားကြောင့် စိတ်သိမ်မွေ့သည်။
+                                    တစ်ယောက်တည်း ဖယ်ခွာထွက်လာစေတတ်သည်။ ဝေဒနာ ခံစားရာတွင် ပြင်းပြစေသည်။ လောကတွင်
+                                    အကောင်းဆုံးချည်း၊ အလှဆုံးချည်းမြင်စေ၊ မျှော်မှန်းစေပြီး အကောင်းနှင့်အလှ ဆိုတာချည်း
+                                    ဖြစ်နိူင်သည်ဟု ယုံမှားစေသေး၏ ။ စိတ်ကူးယဉ်စေ၏ ။ စိတ်ဒဏ်ရာ ရလွယ်စေ၏ ။ မေ့ပျောက်ခဲစေ၏ ။
+                                    ပြီးတော့ ကိုကို့နှမ မြနန္ဒာအဖို့ ပိုဆိုးသည်မှာ ကိုယ့်ကိုယ်ကို ဘာလိုချင်မှန်း၊ ဘဝတွင်
+                                    ဘယ်လိုနေရမှန်း မသိခဲ့ခြင်းပင် ဖြစ်လေသည်။
+
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-2/5  ">
+                            <img class="w-full h-full sm:pt-3 sm:pb-3 lg:pt-4 lg:pb-4 xl:pt-5 
+                        xl:pb-5 xl:pl-8" src="/photos/mine.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="footer-template"></div>
+    </div>
+</body>
+
+</html>
