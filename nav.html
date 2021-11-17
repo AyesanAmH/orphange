@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,11 @@
     <link rel="stylesheet" href="css/tailwind.css">
     <title>Document</title>
 </head>
+
 <body>
+
+  
+  
     <nav class="flex flex-wrap w-full bg-white justify-center md:justify-end mt-1">
         <div class="flex items-center mx-0.5 md:hidden w-full">
             <button id="menu-button" class="outline-none hover:text-gray-500">
@@ -16,16 +21,22 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
-            <div class="shadow flex flex-grow mx-1">
-                <input class="w-full rounded p-2 focus:outline-none " type="text" placeholder="ရှာမည်...">
-                <button class="bg-white w-auto flex justify-end items-center  p-2 hover:text-gray-500">
+            <form action="search.html" method="GET" class=" shadow flex flex-grow mx-1">
+                <input id="textinput" name="searchinput" class="w-full rounded p-2 focus:outline-none " type="text"
+                    placeholder="ရှာမည်..." required>
+                <button type="submit" id="search" onclick="return checkclick()"
+                    class="bg-white w-auto flex justify-end items-center  p-2 hover:text-gray-500">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                             clip-rule="evenodd" />
                     </svg>
                 </button>
-            </div>
+            </form>
+            <script>
+                
+            </script>
+
             <button id="shopping-button" class="outline-none hover:text-gray-500">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -37,36 +48,44 @@
         <div class="hidden md:flex md:items-center md:w-auto" id="menu">
             <ul class="pt-2 md:flex md:justify-between md:pt-0 md:items-center">
                 <li>
-                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="index.html">မူလစာမျက်နှာ</a>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500"
+                        href="index.html">မူလစာမျက်နှာ</a>
                 </li>
                 <li>
-                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="donors.html">အလှူရှင်</a>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500"
+                        href="donors.html">အလှူရှင်</a>
                 </li>
                 <li>
-                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="staffs&volunteers.html">ဝန်ထမ်း</a>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500"
+                        href="staffs&volunteers.html">ဝန်ထမ်း</a>
                 </li>
                 <li>
-                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="schoolfete.html">ရန်ပုံငွေ</a>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500"
+                        href="schoolfete.html">ရန်ပုံငွေ</a>
                 </li>
                 <li>
-                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="adaylife.html">တစ်နေ့တာ</a>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500"
+                        href="adaylife.html">တစ်နေ့တာ</a>
                 </li>
                 <li>
-                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="memories.html">အမှတ်တရ</a>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500"
+                        href="memories.html">အမှတ်တရ</a>
                 </li>
                 <li>
-                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500" href="contactus.html">ဆက်သွယ်ရန်</a>
+                    <a class="font-semibold md:p-4 py-2 text-lg block hover:text-gray-500"
+                        href="contactus.html">ဆက်သွယ်ရန်</a>
                 </li>
                 <li>
-                    <a class="0 md:p-4 py-2 block hover:text-gray-500 hidden md:flex" href="">
+                    <a class="0 md:p-4 py-2  hover:text-gray-500 hidden md:flex" id="show">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
                                 d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
                                 clip-rule="evenodd" />
                         </svg></a>
+
                 </li>
                 <li>
-                    <a class=" md:p-4 py-3 block hover:text-gray-500 hidden md:flex" href="">
+                    <a class=" md:p-4 py-3  hover:text-gray-500 hidden md:flex" href="">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24"
                             stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -75,6 +94,63 @@
                     </a>
                 </li>
             </ul>
+        </div>
+        <div class="fixed hidden  inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-modal">
+            <div class="relative top-20  p-5 mx-auto  border w-96 shadow-lg rounded-md bg-white">
+    
+                <div class="flex ">
+                    <form action="search.html" method="GET" class="p-2 border border-gray-200 shadow flex flex-grow ">
+                        <div class="flex items-center justify-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+    
+                        </div>
+                        <input id="modal-input" name="searchinput" class="pl-1  w-full flex items-center  rounded focus:outline-none " type="text"
+                            placeholder="ရှာမည်..." required>
+    
+                    </form>
+                    <div class="flex items-center bg-gray-200 w-9 justify-center ">
+                        <button id="close_modal">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-gray-600 "
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-4">
+    
+                    <button onclick="lit()" id="lit"
+                        class=" mr-3 bg-white text-sm hover:bg-gray-400 text-gray-800 font-semibold  px-4 border border-gray-400 rounded-xl shadow">
+                        စာပေ
+                    </button>
+                    <button onclick="music()" id="music"
+                        class=" bg-white text-sm hover:bg-gray-400 text-gray-800 font-semibold px-4 border border-gray-400 rounded-xl shadow">
+                        ဂီတ
+                    </button>
+    
+                </div>
+                <div class="flex mt-4 justify-center">
+                    <button onclick="travel()" id="travel"
+                        class="pb-1 mr-3 bg-white text-sm hover:bg-gray-400 text-gray-800 font-semibold  px-4 border border-gray-400 rounded-xl shadow">
+                        ခရီးသွား
+                    </button>
+                    <button onclick="art()" id="art"
+                        class="pb-1 mr-3 bg-white text-sm hover:bg-gray-400 text-gray-800 font-semibold  px-4 border border-gray-400 rounded-xl shadow">
+                        ပန်းချီ
+                    </button>
+                    <button onclick="arg()" id="arg"
+                        class="pb-1 bg-white text-sm hover:bg-gray-400 text-gray-800 font-semibold px-4 border border-gray-400 rounded-xl shadow">
+                        စိုက်ပျိုးရေး
+                    </button>
+                </div> 
+            </div>
         </div>
         <script>
             const menu_button = document.querySelector('#menu-button')
@@ -89,8 +165,57 @@
                     menu.classList.toggle('hidden', true)
                 }
             })
+
+
+            let modal = document.getElementById('my-modal')
+            const close = document.getElementById('close_modal')
+            const show = document.getElementById('show')
+            const text = document.getElementById('modal-input')
+
+            show.addEventListener('click', () => {
+                modal.style.display = 'block'
+                text.focus()
+
+
+            })
+            close.addEventListener('click', () => {
+                modal.style.display = 'none'
+            })
+
+            window.addEventListener('click', () => {
+                if (event.target == modal) {
+                    modal.style.display = 'none'
+                }
+            })
+
+            function lit() {
+
+                text.value = "စာပေ"
+                text.focus()
+            }
+
+            function music() {
+                text.value = "ဂီတ"
+                text.focus()
+            }
+
+            function travel() {
+                text.value = "ခရီးသွား"
+                text.focus()
+            }
+
+            function art() {
+                text.value = "ပန်းချီ"
+                text.focus()
+            }
+
+            function arg() {
+                text.value = "စိုက်ပျိုးရေး"
+                text.focus()
+            }
         </script>
     </nav>
 
 </body>
+
 </html>
