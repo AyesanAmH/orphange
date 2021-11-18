@@ -21,8 +21,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
-            <form action="search.html" method="GET" class=" shadow flex flex-grow mx-1">
-                <input id="textinput" name="searchinput" class="w-full rounded p-2 focus:outline-none " type="text"
+            <form action="search.html" id="navform" method="GET" class=" shadow flex flex-grow mx-1">
+                <input id="navinput" name="searchinput" class="w-full rounded p-2 focus:outline-none " type="text"
                     placeholder="ရှာမည်..." required>
                 <button type="submit" id="search" onclick="return checkclick()"
                     class="bg-white w-auto flex justify-end items-center  p-2 hover:text-gray-500">
@@ -34,7 +34,13 @@
                 </button>
             </form>
             <script>
-                
+                const navform = document.getElementById('navform')
+
+                navform.addEventListener('submit',() => {
+                    const navinput = document.getElementById('navinput').value
+                    sessionStorage.setItem('ok',navinput)
+                    location.href = "search.html"
+                })
             </script>
 
            <a href="cart.html">
@@ -101,7 +107,7 @@
             <div class="relative top-20  p-5 mx-auto  border w-96 shadow-lg rounded-md bg-white">
     
                 <div class="flex ">
-                    <form action="search.html" method="GET" class="p-2 border border-gray-200 shadow flex flex-grow ">
+                    <form id="modalform" action="search.html" method="GET" class="p-2 border border-gray-200 shadow flex flex-grow ">
                         <div class="flex items-center justify-center ">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
@@ -114,6 +120,14 @@
                             placeholder="ရှာမည်..." required>
     
                     </form>
+                    <script>
+                        const modalform = document.getElementById('modalform')
+                        modalform.addEventListener('submit',() => {
+                        const text = document.getElementById('modal-input').value
+                        sessionStorage.setItem('ok',text)
+                        location.href = 'search.html'
+                        })
+                    </script>
                     <div class="flex items-center bg-gray-200 w-9 justify-center ">
                         <button id="close_modal">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current text-gray-600 "
